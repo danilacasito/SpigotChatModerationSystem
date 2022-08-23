@@ -1,3 +1,5 @@
 blockedWords:
   - "No"
   - "u"
+
+enabled: "false"

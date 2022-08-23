@@ -4,3 +4,8 @@ main: me.elordenador.chatmon.ChatMon
 api-version: 1.8.8
 authors: [ elordenador ]
 description: Chat Monitoring
+commands:
+  automod:
+    description: Automod Main Command
+    usage: /<command> (reload:disable:enable)
+    permission: ChatMod.execute

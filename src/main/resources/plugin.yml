@@ -1,0 +1,6 @@
+name: ChatMon
+version: '${project.version}'
+main: me.elordenador.chatmon.ChatMon
+api-version: 1.19
+authors: [ elordenador ]
+description: Chat Monitoring

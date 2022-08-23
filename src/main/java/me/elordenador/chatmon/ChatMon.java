@@ -12,7 +12,7 @@ public final class ChatMon extends JavaPlugin {
         logger.info("[+ CS ] Chat Moderation System Loading");
         this.saveResource("config.yml", false);
         this.getServer().getPluginManager().registerEvents(new EventListener(this), this);
-        logger.info("[+ CS ] Chat Moderation System Loaded");
+        logger.info("[+ CS ] Chat Moderation System Loaded"); // Termino la carga
     }
 
     @Override

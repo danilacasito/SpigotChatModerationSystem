@@ -3,3 +3,5 @@ blockedWords:
   - "u"
 
 enabled: "false"
+
+ServerName: "Server"

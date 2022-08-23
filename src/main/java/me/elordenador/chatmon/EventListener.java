@@ -15,12 +15,11 @@ public class EventListener implements Listener {
         Player player = event.getPlayer();
         Utilities utils = new Utilities();
         String message = event.getMessage();
-        List<String> words = new ArrayList<String>();
+        List<String> words;
         words = (List<String>) this.plugin.getConfig().getList("blockedWords");
-        String[] word = (String[]) words.toArray();
         String enabled = this.plugin.getConfig().getString("enabled");
         if (enabled.equalsIgnoreCase("true")) {
-            if (utils.StringPresent(word, message)) {
+            if (utils.StringPresent(words, message)) {
                 event.setCancelled(true);
                 for (Player p : this.plugin.getServer().getOnlinePlayers()) {
                     if (p.hasPermission("ChatMod.ViewBlocks")) {

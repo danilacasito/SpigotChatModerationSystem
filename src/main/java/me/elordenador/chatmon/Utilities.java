@@ -1,9 +1,13 @@
 package me.elordenador.chatmon;
 
+import java.util.ArrayList;
+import java.util.List;
+
 public class Utilities {
-    public boolean StringPresent(String[] arr, String item) {
-        for (String i : arr) {
-            if (i.contains(item)) {
+    public boolean StringPresent(List<String> list, String item) {
+        for (int i = 0; i < list.size(); i++) {
+            String ite = list.get(i);
+            if (ite.contains(item)) {
                 return true;
             }
         }

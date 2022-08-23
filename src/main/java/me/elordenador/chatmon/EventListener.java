@@ -10,7 +10,7 @@ public class EventListener implements Listener {
     public void onMessageSend(AsyncPlayerChatEvent event) {
         Player player = event.getPlayer();
         String message = event.getMessage();
-        this.plugin.getConfig().getString("blockedWords");
+        String words = this.plugin.getConfig().getString("blockedWords");
         String enabled = this.plugin.getConfig().getString("enabled");
         if (enabled.equalsIgnoreCase("true")) {
             System.out.println("W");

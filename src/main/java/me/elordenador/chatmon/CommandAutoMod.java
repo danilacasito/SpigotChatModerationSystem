@@ -13,7 +13,7 @@ public class CommandAutoMod implements CommandExecutor {
     }
     @Override
     public boolean onCommand(CommandSender sender, Command command, String label, String[] args) {
-        if (args[1].equals("reload")) {
+        if (args[0].equals("reload")) {
             this.plugin.reloadConfig();
             sender.sendMessage(ChatColor.BLUE + "AutoMod " + ChatColor.WHITE + " >> " + ChatColor.RESET + "Config Reloaded");
             return true;

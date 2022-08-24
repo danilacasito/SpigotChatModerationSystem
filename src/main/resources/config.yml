@@ -1,7 +1,16 @@
 blockedWords:
-  - "No"
-  - "u"
+  - "Word1"
+  - "Word2"
 
+# Enable the AutoMod (use "true" or "false", if you put anything else, the plugin will crash)
 enabled: "false"
 
+# The name of the Server (Example: Hypixel)
 ServerName: "Server"
+
+########################################################
+## Messages                                           ##
+########################################################
+messages:
+  automod_reload: "Config Reloaded"
+  automod_blocked: " Sent a message and automod blocked it"

@@ -25,7 +25,7 @@ public class EventListener implements Listener {
                 event.setCancelled(true);
                 for (Player p : this.plugin.getServer().getOnlinePlayers()) {
                     if (p.hasPermission("ChatMod.ViewBlocks")) {
-                        p.sendMessage(ChatColor.DARK_RED + this.plugin.getConfig().getString("ServerName") + ChatColor.RESET + " >> " + player.getName() + " Sent a message and automod blocked it");
+                        p.sendMessage(ChatColor.DARK_RED + this.plugin.getConfig().getString("ServerName") + ChatColor.RESET + " >> " + player.getName() + this.plugin.getConfig().getString("messages.automod_blocked"));
                         p.sendMessage("Message: " + message);
                     }
                 }

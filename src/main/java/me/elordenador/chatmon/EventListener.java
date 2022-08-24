@@ -7,7 +7,6 @@ import org.bukkit.event.Listener;
 import org.bukkit.event.player.AsyncPlayerChatEvent;
 import org.bukkit.plugin.java.JavaPlugin;
 
-import java.util.ArrayList;
 import java.util.List;
 
 public class EventListener implements Listener {
@@ -17,10 +16,12 @@ public class EventListener implements Listener {
         Player player = event.getPlayer();
         Utilities utils = new Utilities();
         String message = event.getMessage();
-        List<String> words;
-        words = (List<String>) this.plugin.getConfig().getList("blockedWords");
+        List words;
+        words = this.plugin.getConfig().getList("blockedWords");
         String enabled = this.plugin.getConfig().getString("enabled");
+        assert enabled != null;
         if (enabled.equalsIgnoreCase("true")) {
+            assert words != null;
             if (utils.StringPresent(words, message)) {
                 event.setCancelled(true);
                 for (Player p : this.plugin.getServer().getOnlinePlayers()) {
